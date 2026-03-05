@@ -1,3 +1,5 @@
+using System;
+
 public static class ArraySelector
 {
     public static void Run()
