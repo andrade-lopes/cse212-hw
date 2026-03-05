@@ -23,17 +23,15 @@ class Program
         // -------------------------
         // Algorithms
         // -------------------------
-        // Uncomment when you are ready to run
-        // Console.WriteLine("\n======================");
-        // Console.WriteLine("Algorithms");
-        // Console.WriteLine("======================");
-        // Algorithms.Run();
+        Console.WriteLine("\n======================");
+        Console.WriteLine("Algorithms");
+        Console.WriteLine("======================");
+        Algorithms.Run();
 
         // -------------------------
         // Solution versions
         // -------------------------
-        // Uncomment to compare with the solution code
-        // DivisorsSolution.Run();
-        // ArraySelectorSolution.Run();
+        DivisorsSolution.Run();
+        ArraySelectorSolution.Run();
     }
 }
