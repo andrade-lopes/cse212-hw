@@ -8,12 +8,22 @@ public static class Arrays
     /// <returns>array of doubles that are the multiples of the supplied number</returns>
     public static double[] MultiplesOf(double number, int length)
     {
-        // TODO Problem 1 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // PLAN
+        // 1. Create a new array of doubles with size equal to 'length'.
+        // 2. Use a loop that goes from index 0 up to length - 1.
+        // 3. For each index, calculate the multiple of the number.
+        // 4. The first value should be number * 1, the second number * 2, etc.
+        // 5. Store each calculated value in the array.
+        // 6. After the loop is finished, return the array.
 
-        return []; // replace this return statement with your own
+        double[] result = new double[length];
+
+        for (int i = 0; i < length; i++)
+        {
+            result[i] = number * (i + 1);
+        }
+
+        return result;
     }
 
     /// <summary>
@@ -25,9 +35,20 @@ public static class Arrays
     /// </summary>
     public static void RotateListRight(List<int> data, int amount)
     {
-        // TODO Problem 2 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // PLAN
+        // 1. Determine the starting index of the elements that will move to the front.
+        //    This index is data.Count - amount.
+        // 2. Use GetRange() to copy the last 'amount' elements into a new list.
+        // 3. Remove those elements from the original list using RemoveRange().
+        // 4. Insert the copied elements at the beginning of the list using InsertRange().
+        // 5. The list will now be rotated to the right.
+
+        int startIndex = data.Count - amount;
+
+        List<int> slice = data.GetRange(startIndex, amount);
+
+        data.RemoveRange(startIndex, amount);
+
+        data.InsertRange(0, slice);
     }
 }
